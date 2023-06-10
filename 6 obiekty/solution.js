@@ -4,7 +4,7 @@ function Person(personName, personSurname) {
   this.surname = personSurname;
 }
 
-for (let i = 0; i < 10; i++) {
+for (let i = 1; i < 10; i++) {
   const personName = prompt("Podaj imię:");
   const personSurname = prompt("Podaj nazwisko:");
   const persons = new Person(personName, personSurname);

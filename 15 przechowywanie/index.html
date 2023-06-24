@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      main {
+        width: 50%;
+        transform: translate(+50%, +20%);
+        border: 1px solid black;
+        border-radius: 100px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid grey;
+      }
+      button {
+        margin-bottom: 20px;
+        width: 100px;
+        height: 50px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+      }
+      .pGood,
+      .pBad,
+      .pSum {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .game {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        width: 80%;
+        height: auto;
+        padding: 10px 0;
+        background-color: black;
+        color: white;
+      }
+      .red {
+        color: red;
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+      .zero {
+        width: 150px;
+        height: 30px;
+        font-size: 0.8rem;
+        opacity: 0.5;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Jak się czujesz?</h1>
+      <div class="buttons">
+        <div>
+          <button class="btnGood">Dobrze!</button>
+          <p>Czułeś się dobrze</p>
+          <p class="pGood">0</p>
+          <p>razy!</p>
+        </div>
+        <div>
+          <button class="btnBad">Źle...</button>
+          <p>Czułeś się źle</p>
+          <p class="pBad">0</p>
+          <p>razy...</p>
+        </div>
+      </div>
+      <button class="game">Hej! Zagrajmy w grę!</button>
+      <p>Suma podanych liczb:</p>
+      <p class="pSum">0</p>
+      <p class="red">
+        ...a teraz odśwież i sprawdź,<br />
+        czy wszystko pamiętam!
+      </p>
+      <button class="zero">ZERUJ WSZYSTKO!</button>
+    </main>
+    <script src="solution.js"></script>
+  </body>
+</html>

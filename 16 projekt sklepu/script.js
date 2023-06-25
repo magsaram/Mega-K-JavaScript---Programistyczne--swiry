@@ -1,15 +1,30 @@
 class Basket {
   items = [];
+  totalValue = 0;
 
   add(item) {
     this.items.push(item);
+    this.addToTotalValue(item.price);
   }
+
+  addToTotalValue(newPrice) {
+    this.totalValue += newPrice;
+  }
+
+  //rozwiązanie produkcyjne (bez przechowywania informacji niepotrzebnie):
+  //   getTotalValue() {
+  //     return this.items.reduce((prev, product) => prev + product.price, 0);
+  //   }
 }
 
 class Product {
   constructor(productName, productPrice) {
     this.name = productName;
     this.price = productPrice;
+  }
+  //tworzymy metody, z których nie musimy od razu korzystać:
+  setNewPrice(newPrice) {
+    this.price = newPrice;
   }
 }
 

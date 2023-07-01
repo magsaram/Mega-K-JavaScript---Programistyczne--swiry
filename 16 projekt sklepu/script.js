@@ -18,7 +18,10 @@ class Basket {
 
   showBasket() {
     this.items
-      .map((product, i) => `${i} - ${product.name} - ${product.price}`)
+      .map(
+        (product, i) =>
+          `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`
+      )
       .forEach((line) => console.log(line));
   }
 }
@@ -43,3 +46,5 @@ shopBasket.add(cucumbers);
 shopBasket.add(cucumbers);
 
 console.log(shopBasket);
+
+shopBasketBasket.showBasket();

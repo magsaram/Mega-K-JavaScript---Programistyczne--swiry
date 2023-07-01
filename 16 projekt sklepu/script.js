@@ -24,6 +24,10 @@ class Basket {
       )
       .forEach((line) => console.log(line));
   }
+
+  remove(no) {
+    this.items.splice(no - 1, 1);
+  }
 }
 
 class Product {
@@ -48,3 +52,7 @@ shopBasket.add(cucumbers);
 console.log(shopBasket);
 
 shopBasketBasket.showBasket();
+
+shopBasket.remove(2);
+
+shopBasket.showBasket();

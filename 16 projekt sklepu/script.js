@@ -15,6 +15,12 @@ class Basket {
   //   getTotalValue() {
   //     return this.items.reduce((prev, product) => prev + product.price, 0);
   //   }
+
+  showBasket() {
+    this.items
+      .map((product, i) => `${i} - ${product.name} - ${product.price}`)
+      .forEach((line) => console.log(line));
+  }
 }
 
 class Product {

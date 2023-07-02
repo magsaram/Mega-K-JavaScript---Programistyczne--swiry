@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+section {
+  padding: 20px;
+  margin-top: 50px;
+  background-color: beige;
+  width: 40%;
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+li {
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+li p {
+  width: 150px;
+}
+li button {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: burlywood;
+  border: 1px solid brown;
+}
+li button:hover {
+  color: white;
+  background-color: brown;
+}

@@ -16,13 +16,11 @@ class Basket {
   //     return this.items.reduce((prev, product) => prev + product.price, 0);
   //   }
 
-  showBasket() {
-    this.items
-      .map(
-        (product, i) =>
-          `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`
-      )
-      .forEach((line) => console.log(line));
+  getBasketSummary() {
+    return this.items.map(
+      (product, i) =>
+        `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`
+    );
   }
 
   remove(no) {
@@ -40,19 +38,3 @@ class Product {
     this.price = newPrice;
   }
 }
-
-const shopBasket = new Basket();
-
-const oranges = new Product(`Pomarańcze LUZ`, 7.55);
-const cucumbers = new Product(`Ogórek duży`, 8.2);
-
-shopBasket.add(cucumbers);
-shopBasket.add(cucumbers);
-
-console.log(shopBasket);
-
-shopBasketBasket.showBasket();
-
-shopBasket.remove(2);
-
-shopBasket.showBasket();

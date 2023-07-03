@@ -9,51 +9,75 @@
     <title>Mega Sklep</title>
   </head>
   <body>
-    <section class="products">
-      <h1>Lista produktów</h1>
-      <ul>
-        <li>
-          <p><strong>Ogórki kiszone</strong></p>
-          <h3>- 9.99</h3>
-          <button
-            class="btn-buy-product"
-            data-name="Ogórki kiszone"
-            data-price="9.99"
-          >
-            Kup!
-          </button>
-        </li>
-        <li>
-          <p><strong>Pomidorki</strong></p>
-          <h3>- 7.50</h3>
-          <button
-            class="btn-buy-product"
-            data-name="Pomidorki"
-            data-price="7.50"
-          >
-            Kup!
-          </button>
-        </li>
-        <li>
-          <p><strong>Pomarańczki</strong></p>
-          <h3>- 6.58</h3>
+    <div>
+      <section class="products">
+        <h1>Lista produktów</h1>
+        <ul class="products-list">
+          <li>
+            <p>Ogórki kiszone</p>
+            <h3>- 9.99</h3>
+            <button
+              class="btn-buy-product"
+              data-name="Ogórki kiszone"
+              data-price="9.99"
+            >
+              Kup!
+            </button>
+          </li>
+          <li>
+            <p>Pomidorki</p>
+            <h3>- 7.50</h3>
+            <button
+              class="btn-buy-product"
+              data-name="Pomidorki"
+              data-price="7.50"
+            >
+              Kup!
+            </button>
+          </li>
+          <li>
+            <p>Pomarańczki</p>
+            <h3>- 6.58</h3>
 
-          <button
-            class="btn-buy-product"
-            data-name="Pomarańczki"
-            data-price="6.58"
-          >
-            Kup!
-          </button>
-        </li>
-      </ul>
-    </section>
-    <section class="basket">
-      <h2>Koszyk</h2>
-      <ul></ul>
-      <button class="btn-buy-all" disabled>Złóż zamówienie</button>
+            <button
+              class="btn-buy-product"
+              data-name="Pomarańczki"
+              data-price="6.58"
+            >
+              Kup!
+            </button>
+          </li>
+        </ul>
+      </section>
+      <section class="basket">
+        <h2>Koszyk</h2>
+        <ul></ul>
+        <button class="btn-buy-all" disabled>Złóż zamówienie</button>
+      </section>
+    </div>
+
+    <section class="admin-add-product">
+      <h2>Administracja: dodaj produkt</h2>
+      <form class="form-add-product">
+        <input
+          class="product-name"
+          type="text"
+          name="product-name"
+          placeholder="Podaj nazwę..."
+          required
+        />
+        <input
+          class="product-price"
+          type="number"
+          name="product-price"
+          placeholder="Podaj cenę..."
+          required
+        />
+        <button type="submit">Dodaj</button>
+      </form>
     </section>
     <script src="basket.js"></script>
     <script src="ui.js"></script>
+    <script src="adminui.js"></script>
   </body>
 </html>

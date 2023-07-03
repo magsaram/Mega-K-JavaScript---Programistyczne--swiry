@@ -27,7 +27,8 @@ li {
 li p {
   width: 150px;
 }
-li button {
+li button,
+.btn-buy-all {
   padding: 15px;
   border-radius: 10px;
   background-color: burlywood;
@@ -36,4 +37,7 @@ li button {
 li button:hover {
   color: white;
   background-color: brown;
+}
+.btn-buy-all {
+  font-size: 1.2rem;
 }

@@ -2,6 +2,12 @@ class Basket {
   items = [];
   totalValue = 0;
 
+  clear() {
+    //this.items.lenght = 0
+    //this.items.splice(0);
+    this.items = [];
+  }
+
   add(item) {
     this.items.push(item);
     this.addToTotalValue(item.price);
@@ -11,16 +17,18 @@ class Basket {
     this.totalValue += newPrice;
   }
 
-  //rozwiązanie produkcyjne (bez przechowywania informacji niepotrzebnie):
-  //   getTotalValue() {
-  //     return this.items.reduce((prev, product) => prev + product.price, 0);
-  //   }
+  // rozwiązanie produkcyjne (bez przechowywania informacji niepotrzebnie):
+  getTotalValue() {
+    return this.items.reduce((prev, product) => prev + product.price, 0);
+  }
 
   getBasketSummary() {
-    return this.items.map(
-      (product, i) =>
-        `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`
-    );
+    return this.items.map((product, i) => {
+      return {
+        id: i + 1,
+        text: `${i + 1} - ${product.name} - ${product.price.toFixed(2)}zł`,
+      };
+    });
   }
 
   remove(no) {

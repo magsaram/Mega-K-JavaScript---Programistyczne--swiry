@@ -5,10 +5,14 @@ const processWeatherData = async (data) => {
     return b.temperatura - a.temperatura;
   });
 
-  const { stacja: station, temperatura: temperature } = sorted[0];
-
+  const { stacja: station0, temperatura: temperature0 } = sorted[0];
   console.log(
-    `Najwyższa temperatura ${temperature} st.C jest aktualnie w ${station}.`
+    `Najwyższa temperatura ${temperature0} st.C jest aktualnie w mieście ${station0}.`
+  );
+  const { stacja: stationLast, temperatura: temperatureLast } =
+    sorted[sorted.length - 1];
+  console.log(
+    `Najniższa temperatura ${temperatureLast} st.C jest aktualnie w mieście ${stationLast}.`
   );
 };
 

@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "chokidar": "^3.5.3"
+    "chokidar": "^3.5.3",
+    "node-fetch": "^2.6.12"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.4"
   }
 }

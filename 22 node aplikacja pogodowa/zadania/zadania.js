@@ -14,6 +14,13 @@ const processWeatherData = async (data) => {
   console.log(
     `Najniższa temperatura ${temperatureLast} st.C jest aktualnie w mieście ${stationLast}.`
   );
+
+  console.log(`\n`);
+
+  sorted.forEach((element) => {
+    const { stacja, temperatura } = element;
+    console.log(`Temperatura w mieście ${stacja}: ${temperatura} st.C`);
+  });
 };
 
 const findWarmestPlaceInPoland = async () => {

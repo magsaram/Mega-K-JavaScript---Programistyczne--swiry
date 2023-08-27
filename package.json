@@ -3,6 +3,7 @@
     "bcrypt": "^5.1.0",
     "chokidar": "^3.5.3",
     "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "node-fetch": "^2.6.12"
   },
   "devDependencies": {
